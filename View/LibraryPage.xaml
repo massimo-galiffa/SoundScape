@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoundScape.View.LibraryPage">
+    
+    <VerticalStackLayout>
+        <ScrollView>
+            <VerticalStackLayout>
+                <Label Text="Your Playlists" FontSize="24" Margin="16,0,0,24" />
+
+                <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*" WidthRequest="900">
+                    <Frame BackgroundColor="LightBlue" Grid.Column="0" Grid.Row="0" HeightRequest="150" WidthRequest="200">
+                        <Grid>
+                            <Image Source="background_image1.jpg" Aspect="AspectFill" />
+                            <Label Text="Morning Playlist" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="16" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame BackgroundColor="LightGreen" Grid.Column="1" Grid.Row="0" HeightRequest="150" WidthRequest="200">
+                        <Grid>
+                            <Image Source="background_image2.jpg" Aspect="AspectFill" />
+                            <Label Text="Rap" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="16" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame BackgroundColor="LightPink" Grid.Column="2" Grid.Row="0" HeightRequest="150" WidthRequest="200">
+                        <Grid>
+                            <Image Source="background_image3.jpg" Aspect="AspectFill" />
+                            <Label Text="Yeat Songs" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="16" />
+                        </Grid>
+                    </Frame>
+
+                    <Frame BackgroundColor="LightCoral" Grid.Column="4" Grid.Row="0" HeightRequest="150" WidthRequest="200">
+                        <Grid>
+                            <Image Source="background_image4.jpg" Aspect="AspectFill" />
+                            <Label Text="Study Playlist" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="16" />
+                        </Grid>
+                    </Frame>
+
+
+                </Grid>
+
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+    </VerticalStackLayout>
+</ContentPage>

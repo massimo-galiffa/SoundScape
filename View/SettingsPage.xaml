@@ -1,0 +1,68 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoundScape.View.SettingsPage"
+             Title="Settings">
+    <ScrollView>
+        <VerticalStackLayout Spacing="15" Padding="10">
+
+            <!-- Sound Quality Settings -->
+            <Label Text="Sound Quality" FontSize="18" />
+            <HorizontalStackLayout Spacing="10">
+                <RadioButton Content="Low" GroupName="SoundQuality" />
+                <RadioButton Content="Medium" GroupName="SoundQuality" />
+                <RadioButton Content="High" GroupName="SoundQuality" />
+            </HorizontalStackLayout>
+
+            <!-- Shuffle Songs Setting -->
+            <Label Text="Shuffle Songs" FontSize="18" />
+            <Switch IsToggled="{Binding ShuffleSongs}" />
+
+            <!-- Song Transition Setting -->
+            <Label Text="Song Transition Seconds" FontSize="18" />
+            <Slider Value="{Binding TransitionLevel}" Maximum="1" Minimum="0" />
+
+            <!-- Favorite Genre Setting -->
+            <Label Text="Favorite Genre" FontSize="18" />
+            <Picker Title="Select a genre" SelectedIndex="{Binding FavoriteGenreIndex}" ItemsSource="{Binding Genres}" />
+
+            <!-- Birthday Setting -->
+            <Label Text="Birthday" FontSize="18" />
+            <DatePicker Date="{Binding Birthday}" />
+
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+                <StackLayout Padding="20" Spacing="10">
+
+                    <!-- Header Frame with Label inside -->
+                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Label Text="SoundScape" FontSize="Large" TextColor="White"/>
+                            <Label Text="Your ultimate music destination" FontSize="Small" TextColor="White"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Navigation Frame with vertical options -->
+                    <Frame  BackgroundColor="Transparent" BorderColor="Transparent">
+                        <StackLayout Orientation="Horizontal" Spacing="4">
+                            <Image Source="soundscapelogo.png" HeightRequest="200" WidthRequest="200"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Subscribe Frame -->
+                    <Frame  BackgroundColor="Transparent" BorderColor="Transparent">
+                        <StackLayout Orientation="Horizontal" Spacing="5">
+                            <Label Text="Join our music community for the latest updates." FontSize="Medium" TextColor="White"/>
+                            <Entry Placeholder="Enter your email address" TextColor="White"/>
+                            <Button Text="Subscribe" BackgroundColor="#5856d6" TextColor="White" CornerRadius="10"/>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </Frame>
+
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

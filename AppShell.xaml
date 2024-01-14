@@ -1,0 +1,40 @@
+<Shell
+    x:Class="SoundScape.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:view="clr-namespace:SoundScape.View"
+    Shell.FlyoutBehavior="Locked"
+    FlyoutBackground="#280B34"
+    Title="SoundScape">
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid Padding="10">
+                <Frame CornerRadius="50" HeightRequest="80" WidthRequest="80">
+                    <Image Source="drinkcat.png" />
+                </Frame>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <FlyoutItem  Title="Library" Icon="library.png">
+        <ShellContent ContentTemplate="{DataTemplate view:LibraryPage}" />
+    </FlyoutItem>
+    <FlyoutItem  Title="Home" Icon="home.png">
+        <ShellContent ContentTemplate="{DataTemplate view:HomePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Search" Icon="search.png">
+        <ShellContent ContentTemplate="{DataTemplate view:SearchPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings" Icon="settings.png">
+        <ShellContent ContentTemplate="{DataTemplate view:SettingsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="FAQ" Icon="faq.png">
+        <ShellContent ContentTemplate="{DataTemplate view:FaqPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Logout" Icon="logout.png">
+        <ShellContent ContentTemplate="{DataTemplate view:SignOut}" />
+    </FlyoutItem>
+</Shell>
