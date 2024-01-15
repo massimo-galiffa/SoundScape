@@ -1,12 +1,66 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SoundScape.View.FaqPage"
-             Title="FaqPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             x:Class="SoundScape.View.FaqPage">
+    <ScrollView Margin="10">
+        <StackLayout Spacing="10">
+            <Label Text="Frequently Asked Questions"/>
+            <StackLayout >
+                <Label  Text="What is SoundScape?" 
+                   FontSize="Large" 
+                   FontAttributes="Bold" 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="FillAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="SoundScape is a mobile application that allows users to create and share soundscapes. A soundscape is a collection of sounds that are recorded and uploaded by users. These sounds can be anything from the sound of a bird chirping to the sound of a car driving by. Users can create soundscapes by recording sounds and uploading them to the app. Users can also listen to soundscapes created by other users."
+                   IsVisible="False" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="What is SoundScape?" 
+       FontSize="Large" 
+       FontAttributes="Bold" 
+       VerticalOptions="Center" 
+       HorizontalOptions="FillAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="SoundScape is a mobile application that allows users to create and share soundscapes. A soundscape is a collection of sounds that are recorded and uploaded by users. These sounds can be anything from the sound of a bird chirping to the sound of a car driving by. Users can create soundscapes by recording sounds and uploading them to the app. Users can also listen to soundscapes created by other users."
+       IsVisible="False" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="What is SoundScape?" 
+       FontSize="Large" 
+       FontAttributes="Bold" 
+       VerticalOptions="Center" 
+       HorizontalOptions="FillAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="SoundScape is a mobile application that allows users to create and share soundscapes. A soundscape is a collection of sounds that are recorded and uploaded by users. These sounds can be anything from the sound of a bird chirping to the sound of a car driving by. Users can create soundscapes by recording sounds and uploading them to the app. Users can also listen to soundscapes created by other users."
+       IsVisible="False" />
+            </StackLayout>
+            <StackLayout>
+                <Label Text="What is SoundScape?" 
+       FontSize="Large" 
+       FontAttributes="Bold" 
+       VerticalOptions="Center" 
+       HorizontalOptions="FillAndExpand">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label Text="SoundScape is a mobile application that allows users to create and share soundscapes. A soundscape is a collection of sounds that are recorded and uploaded by users. These sounds can be anything from the sound of a bird chirping to the sound of a car driving by. Users can create soundscapes by recording sounds and uploading them to the app. Users can also listen to soundscapes created by other users."
+       IsVisible="False" />
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>
