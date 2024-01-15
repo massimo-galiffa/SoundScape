@@ -3,78 +3,67 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SoundScape.View.HomePage">
     <ScrollView>
-        <VerticalStackLayout>
-            <Label Text="Hello" FontSize="24" Margin="16,0,0,24" />
+        <VerticalStackLayout Padding="16" Spacing="10">
 
-            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*" WidthRequest="900">
-                <Frame BackgroundColor="LightBlue" Grid.Column="0" Grid.Row="0" HeightRequest="150" WidthRequest="200">
+            <Label Text="Recently Listened Playlists" FontSize="24" />
+
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto" HorizontalOptions="CenterAndExpand">
+                <!-- Playlist Frame 1 -->
+                <Frame BackgroundColor="Yellow" Grid.Column="0" CornerRadius="10" Padding="0" Margin="5" HeightRequest="160" WidthRequest="150">
                     <Grid>
-                        <Image Source="background_image1.jpg" Aspect="AspectFill" />
-                        <Label Text="Morning Playlist" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="16" />
+                        <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
+                            <Image Source="morningjpg.jpg" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
+                        </Frame>
+                        <Label Text="Morning Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
                     </Grid>
                 </Frame>
-
-                <Frame BackgroundColor="LightGreen" Grid.Column="1" Grid.Row="0" HeightRequest="150" WidthRequest="200">
+                <!-- Playlist Frame 1 -->
+                <Frame BackgroundColor="Yellow" Grid.Column="1" CornerRadius="10" Padding="0" Margin="5" HeightRequest="160" WidthRequest="150">
                     <Grid>
-                        <Image Source="background_image2.jpg" Aspect="AspectFill" />
-                        <Label Text="Rap" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="16" />
+                        <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
+                        <Image Source="crowd.jpg" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
+                        </Frame>
+                        <Label Text="Morning Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
                     </Grid>
                 </Frame>
-
-                <Frame BackgroundColor="LightPink" Grid.Column="2" Grid.Row="0" HeightRequest="150" WidthRequest="200">
+                <!-- Playlist Frame 1 -->
+                <Frame BackgroundColor="Yellow" Grid.Column="2" CornerRadius="10" Padding="0" Margin="5" HeightRequest="160" WidthRequest="150">
                     <Grid>
-                        <Image Source="background_image3.jpg" Aspect="AspectFill" />
-                        <Label Text="Yeat Songs" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="16" />
+                        <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
+                        <Image Source="yeat.png" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
+                        </Frame>
+                        <Label Text="Morning Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
                     </Grid>
                 </Frame>
-
-                <Frame BackgroundColor="LightCoral" Grid.Column="4" Grid.Row="0" HeightRequest="150" WidthRequest="200">
+                <!-- Playlist Frame 1 -->
+                <Frame BackgroundColor="Yellow" Grid.Column="3" CornerRadius="10" Padding="0" Margin="5" HeightRequest="160" WidthRequest="150">
                     <Grid>
-                        <Image Source="background_image4.jpg" Aspect="AspectFill" />
-                        <Label Text="Study Playlist" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="16" />
+                        <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
+                            <Image Source="study.jpg" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
+                        </Frame>
+                        <Label Text="Morning Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
+                        
                     </Grid>
                 </Frame>
-
-
             </Grid>
 
-            <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,24" />
 
-            <Label Text="Recently Played" FontSize="18" Margin="16,16,16,8" />
+            <VerticalStackLayout>
+                <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,24" />
+                <Label Text="Recently Played Tracks" FontSize="24" Margin="16,0,0,24" />
 
-            <Frame BackgroundColor="LightGray" Padding="8" Margin="16,0,16,16">
-                <Grid ColumnDefinitions="*,*" RowDefinitions="auto,auto">
-                    <Image Source="background_image3.jpg" Aspect="AspectFill" Grid.Column="0" Grid.Row="0" HeightRequest="100" WidthRequest="100" />
-                    <Image Source="background_image4.jpg" Aspect="AspectFill" Grid.Column="1" Grid.Row="0" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="STARGAZING" FontSize="16" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" Margin="16,0,0,0" />
-                    <Label Text="Can You Be" FontSize="16" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" Margin="16,0,0,0" />
-                </Grid>
-            </Frame>
-
-            <Frame BackgroundColor="LightGray" Padding="8" Margin="16,0,16,16">
-                <Grid ColumnDefinitions="*,*" RowDefinitions="auto,auto">
-                    <Image Source="background_image1.jpg" Aspect="AspectFill" Grid.Column="0" Grid.Row="0" HeightRequest="100" WidthRequest="100" />
-                    <Image Source="background_image2.jpg" Aspect="AspectFill" Grid.Column="1" Grid.Row="0" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="ASTROWORLD" FontSize="16" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" Margin="16,0,0,0" />
-                    <Label Text="VULTURES" FontSize="16" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" Margin="16,0,0,0" />
-                </Grid>
-            </Frame>
-            <Frame BackgroundColor="LightGray" Padding="8" Margin="16,0,16,16">
-                <Grid ColumnDefinitions="*,*" RowDefinitions="auto,auto">
-                    <Image Source="background_image1.jpg" Aspect="AspectFill" Grid.Column="0" Grid.Row="0" HeightRequest="100" WidthRequest="100" />
-                    <Image Source="background_image2.jpg" Aspect="AspectFill" Grid.Column="1" Grid.Row="0" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="ASTROWORLD" FontSize="16" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" Margin="16,0,0,0" />
-                    <Label Text="VULTURES" FontSize="16" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" Margin="16,0,0,0" />
-                </Grid>
-            </Frame>
-            <Frame BackgroundColor="LightGray" Padding="8" Margin="16,0,16,16">
-                <Grid ColumnDefinitions="*,*" RowDefinitions="auto,auto">
-                    <Image Source="background_image1.jpg" Aspect="AspectFill" Grid.Column="0" Grid.Row="0" HeightRequest="100" WidthRequest="100" />
-                    <Image Source="background_image2.jpg" Aspect="AspectFill" Grid.Column="1" Grid.Row="0" HeightRequest="100" WidthRequest="100" />
-                    <Label Text="ASTROWORLD" FontSize="16" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" Margin="16,0,0,0" />
-                    <Label Text="VULTURES" FontSize="16" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Start" Margin="16,0,0,0" />
-                </Grid>
-            </Frame>
+                <CollectionView x:Name="recentlyPlayedList">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid ColumnDefinitions="Auto, *, Auto" Padding="10">
+                                <Label Text="{Binding Artist}" Grid.Column="1" />
+                                <Label Text="{Binding Title}" Grid.Column="1" HorizontalOptions="Center" />
+                                <Label Text="{Binding Duration}" Grid.Column="1" HorizontalOptions="End" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
         </VerticalStackLayout>
 
     </ScrollView>

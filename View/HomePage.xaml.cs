@@ -6,4 +6,9 @@ public partial class HomePage : ContentPage
 	{
         InitializeComponent();
 	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        recentlyPlayedList.ItemsSource = new RecentlyPlayed().Songs;
+    }
 }

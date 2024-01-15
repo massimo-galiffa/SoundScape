@@ -3,35 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SoundScape.View.SearchPage">
     <StackLayout>
-        <SearchBar x:Name="searchBar" Placeholder="Search" Text="{Binding .}"  />
-        <Button Text="Clear"  HorizontalOptions="End" Margin="0,10,10,0" />
 
-        <Label Text="Recent Searches" FontSize="18"  Margin="10,0,0,0" />
-        <CollectionView x:Name="recentSearchesList" ItemsSource="{Binding .}" Margin="10,0,10,0">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Padding="10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{Binding .}" FontSize="16" />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+        <!-- Search Bar -->
+        <SearchBar
+               Placeholder="Search" 
+               Text="{Binding SearchText}" 
+               SearchCommand="{Binding PerformSearchCommand}" />
 
-        <Label Text="Suggested Mixes" FontSize="18"  Margin="10,20,0,0" />
-        <CollectionView x:Name="suggestedMixesList" Margin="10,0,10,0">
-            <CollectionView.ItemTemplate>
+        <!-- Clear Button -->
+        <Button Text="Clear" 
+            HorizontalOptions="End" 
+            Margin="0,10,10,0" 
+            Command="{Binding PerformClearCommand}" />
+        <Label Text="Recent Searches:" Padding="10"></Label>
+        <Label Text="No recent searches." FontSize="16" Margin="10,0,0,0">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label" Binding="{Binding RecentSearches.Count}" Value="0">
+                    <Setter Property="IsVisible" Value="True" />
+                </DataTrigger>
+                <DataTrigger TargetType="Label" Binding="{Binding RecentSearches.Count}" Value="1">
+                    <Setter Property="IsVisible" Value="False" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+
+        <!-- ListView to display RecentSearches -->
+        <ListView ItemsSource="{Binding RecentSearches}" Margin="10,0,10,0">
+            <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid Padding="10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Label Text="{Binding .}" FontSize="16" />
-                    </Grid>
+                    <TextCell Text="{Binding}" />
                 </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </StackLayout>
 </ContentPage>

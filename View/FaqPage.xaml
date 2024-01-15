@@ -4,62 +4,91 @@
              x:Class="SoundScape.View.FaqPage">
     <ScrollView Margin="10">
         <StackLayout Spacing="10">
-            <Label Text="Frequently Asked Questions"/>
-            <StackLayout >
-                <Label  Text="What is SoundScape?" 
-                   FontSize="Large" 
-                   FontAttributes="Bold" 
-                   VerticalOptions="Center" 
-                   HorizontalOptions="FillAndExpand">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
-                    </Label.GestureRecognizers>
-                </Label>
-                <Label Text="SoundScape is a mobile application that allows users to create and share soundscapes. A soundscape is a collection of sounds that are recorded and uploaded by users. These sounds can be anything from the sound of a bird chirping to the sound of a car driving by. Users can create soundscapes by recording sounds and uploading them to the app. Users can also listen to soundscapes created by other users."
-                   IsVisible="False" />
-            </StackLayout>
-            <StackLayout>
-                <Label Text="What is SoundScape?" 
-       FontSize="Large" 
-       FontAttributes="Bold" 
-       VerticalOptions="Center" 
-       HorizontalOptions="FillAndExpand">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
-                    </Label.GestureRecognizers>
-                </Label>
-                <Label Text="SoundScape is a mobile application that allows users to create and share soundscapes. A soundscape is a collection of sounds that are recorded and uploaded by users. These sounds can be anything from the sound of a bird chirping to the sound of a car driving by. Users can create soundscapes by recording sounds and uploading them to the app. Users can also listen to soundscapes created by other users."
-       IsVisible="False" />
-            </StackLayout>
-            <StackLayout>
-                <Label Text="What is SoundScape?" 
-       FontSize="Large" 
-       FontAttributes="Bold" 
-       VerticalOptions="Center" 
-       HorizontalOptions="FillAndExpand">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
-                    </Label.GestureRecognizers>
-                </Label>
-                <Label Text="SoundScape is a mobile application that allows users to create and share soundscapes. A soundscape is a collection of sounds that are recorded and uploaded by users. These sounds can be anything from the sound of a bird chirping to the sound of a car driving by. Users can create soundscapes by recording sounds and uploading them to the app. Users can also listen to soundscapes created by other users."
-       IsVisible="False" />
-            </StackLayout>
-            <StackLayout>
-                <Label Text="What is SoundScape?" 
-       FontSize="Large" 
-       FontAttributes="Bold" 
-       VerticalOptions="Center" 
-       HorizontalOptions="FillAndExpand">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
-                    </Label.GestureRecognizers>
-                </Label>
-                <Label Text="SoundScape is a mobile application that allows users to create and share soundscapes. A soundscape is a collection of sounds that are recorded and uploaded by users. These sounds can be anything from the sound of a bird chirping to the sound of a car driving by. Users can create soundscapes by recording sounds and uploading them to the app. Users can also listen to soundscapes created by other users."
-       IsVisible="False" />
-            </StackLayout>
+            <Label Text="Frequently Asked Questions" FontSize="Header" HorizontalOptions="Center"/>
+            <Label Text="Tap on a question to see the answer" FontSize="Small" TextColor="Purple" HorizontalOptions="Center"/>
 
+            <!-- FAQ Item 1 -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+                <StackLayout Padding="20">
+                    <Label Text="What is SoundScape?" 
+                       FontSize="Medium" 
+                       FontAttributes="Bold" 
+                       VerticalOptions="Center" 
+                       HorizontalOptions="FillAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="SoundScape is a mobile application that allows users to create and share Playlists"
+                       IsVisible="False" />
+                </StackLayout>
+            </Frame>
 
+            <!-- FAQ Item 2 -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+                <StackLayout Padding="20">
+                    <Label Text="Is SoundScape free to use?" 
+                        FontSize="Medium" 
+                       FontAttributes="Bold" 
+                       VerticalOptions="Center" 
+                       HorizontalOptions="FillAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="SoundScape offers both free and premium subscription options. The free version includes basic streaming functionality with ads, while the premium subscription offers an ad-free experience with additional features like offline listening and higher quality audio."
+                       IsVisible="False" />
+                </StackLayout>
+            </Frame>
 
+            <!-- FAQ Item 3 -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+                <StackLayout Padding="20">
+                    <Label Text="How can I find my favorite music on SoundScape?" 
+                        FontSize="Medium" 
+                       FontAttributes="Bold" 
+                       VerticalOptions="Center" 
+                       HorizontalOptions="FillAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="You can search for specific artists, albums, or songs using the search bar. "
+                       IsVisible="False" />
+                </StackLayout>
+            </Frame>
+            <!-- FAQ Item 4 -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+                <StackLayout Padding="20">
+                    <Label Text="What should I do if I encounter a problem or bug?" 
+            FontSize="Medium" 
+           FontAttributes="Bold" 
+           VerticalOptions="Center" 
+           HorizontalOptions="FillAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="If you experience any issues, please contact our support team"
+           IsVisible="False" />
+                </StackLayout>
+            </Frame>
+            <!-- FAQ Item 5 -->
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+                <StackLayout Padding="20">
+                    <Label Text="Is there a limit to how many songs I can skip?" 
+            FontSize="Medium" 
+           FontAttributes="Bold" 
+           VerticalOptions="Center" 
+           HorizontalOptions="FillAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="For free users, there is a limit on the number of skips per hour. However, premium subscribers enjoy unlimited skips."
+           IsVisible="False" />
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ScrollView>
 

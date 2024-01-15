@@ -32,27 +32,42 @@
             <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
                 <StackLayout Padding="20" Spacing="10">
 
-                    <!-- Header Frame with Label inside -->
+                    <!-- Header Frame with Grid inside -->
                     <Frame BackgroundColor="Transparent" BorderColor="Transparent">
-                        <StackLayout Orientation="Horizontal" Spacing="10">
-                            <Label Text="SoundScape" FontSize="Large" TextColor="White"/>
-                            <Label Text="Your ultimate music destination" FontSize="Small" TextColor="White"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Orientation="Vertical" Grid.Column="0">
+                                <Label Text="SoundScape" FontSize="Large" TextColor="White"/>
+                                <Label Text="Your ultimate music destination" FontSize="Small" TextColor="White"/>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="End">
+                                <Label Text="Impressum" FontSize="Medium" TextColor="White" FontAttributes="Bold"/>
+                                <Label Text="located in switzerland" FontSize="Caption" TextColor="White"/>
+                                <Label Text="SoundScape Inc." FontSize="Caption" />
+                                <Label Text="123 Music Street" FontSize="Caption" />
+                                <Label Text="Melody Town, MT 56789" FontSize="Caption" />
+                                <Label Text="Email: contact@soundscape.com" FontSize="Caption" />
+
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <!-- Navigation Frame with Image -->
+                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                        <StackLayout Orientation="Horizontal" Spacing="2">
+                            <Image Source="soundscapelogo.png" HeightRequest="250" WidthRequest="250"/>
                         </StackLayout>
                     </Frame>
 
-                    <!-- Navigation Frame with vertical options -->
-                    <Frame  BackgroundColor="Transparent" BorderColor="Transparent">
-                        <StackLayout Orientation="Horizontal" Spacing="4">
-                            <Image Source="soundscapelogo.png" HeightRequest="200" WidthRequest="200"/>
-                        </StackLayout>
-                    </Frame>
-
-                    <!-- Subscribe Frame -->
-                    <Frame  BackgroundColor="Transparent" BorderColor="Transparent">
-                        <StackLayout Orientation="Horizontal" Spacing="5">
-                            <Label Text="Join our music community for the latest updates." FontSize="Medium" TextColor="White"/>
-                            <Entry Placeholder="Enter your email address" TextColor="White"/>
-                            <Button Text="Subscribe" BackgroundColor="#5856d6" TextColor="White" CornerRadius="10"/>
+                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                        <StackLayout Orientation="Vertical" Spacing="2">
+                            <Label Text="Subscribe to our newsletter" FontSize="Medium" TextColor="White" FontAttributes="Bold"/>
+                            <Entry x:Name="emailEntry" Placeholder="Enter your email address" TextColor="#5856d6"/>
+                            <Button Text="Subscribe" Clicked="Button_Clicked_Subscribed" BackgroundColor="#5856d6" TextColor="White" CornerRadius="10"/>
                         </StackLayout>
                     </Frame>
 
