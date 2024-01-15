@@ -11,6 +11,7 @@ public partial class SettingsPage : ContentPage
     {
         InitializeComponent();
         BindingContext = new SettingsViewModel();
+
     }
 
     private void Button_Clicked(object sender, EventArgs e)

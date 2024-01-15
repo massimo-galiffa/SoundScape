@@ -23,7 +23,7 @@
                         <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
                         <Image Source="crowd.jpg" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
                         </Frame>
-                        <Label Text="Morning Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
+                        <Label Text="Rap Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
                     </Grid>
                 </Frame>
                 <!-- Playlist Frame 1 -->
@@ -32,7 +32,7 @@
                         <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
                         <Image Source="yeat.png" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
                         </Frame>
-                        <Label Text="Morning Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
+                        <Label Text="Yeat Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
                     </Grid>
                 </Frame>
                 <!-- Playlist Frame 1 -->
@@ -41,7 +41,7 @@
                         <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
                             <Image Source="study.jpg" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
                         </Frame>
-                        <Label Text="Morning Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
+                        <Label Text="Study Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
                         
                     </Grid>
                 </Frame>

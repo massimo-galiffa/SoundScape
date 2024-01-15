@@ -43,7 +43,4 @@
     <FlyoutItem Title="FAQ" Icon="faq.png">
         <ShellContent ContentTemplate="{DataTemplate view:FaqPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Logout" Icon="logout.png">
-        <ShellContent ContentTemplate="{DataTemplate view:SignOut}" />
-    </FlyoutItem>
 </Shell>

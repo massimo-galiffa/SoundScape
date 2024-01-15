@@ -52,6 +52,20 @@
                                 <Label Text="123 Music Street" FontSize="Caption" />
                                 <Label Text="Melody Town, MT 56789" FontSize="Caption" />
                                 <Label Text="Email: contact@soundscape.com" FontSize="Caption" />
+                                <!--create a hyperlink to my website that leads to the website-->
+                                <Label 
+                                Text="click here"
+                                VerticalOptions="Center" 
+                                HorizontalOptions="Center" >
+
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding TapCommand}"
+                                 CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
+                                    </Label.GestureRecognizers>
+                                    </Label>
+
+
+
 
                             </StackLayout>
                         </Grid>
@@ -61,6 +75,9 @@
                         <StackLayout Orientation="Horizontal" Spacing="2">
                             <Image Source="soundscapelogo.png" HeightRequest="250" WidthRequest="250"/>
                         </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                        <Label Text="SoundScape Version 1.0" FontSize="Medium" TextColor="White" />
                     </Frame>
 
                     <Frame BackgroundColor="Transparent" BorderColor="Transparent">
