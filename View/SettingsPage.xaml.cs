@@ -13,26 +13,6 @@ public partial class SettingsPage : ContentPage
         BindingContext = new SettingsViewModel();
 
     }
-
-    private void Button_Clicked(object sender, EventArgs e)
-    {
-
-    }
-    private async void Button_Clicked_Subscribed(object sender, EventArgs e)
-    {
-        string email = emailEntry.Text;
-
-        if (!string.IsNullOrWhiteSpace(email) && email.Contains("@"))
-        {
-            // Email is potentially valid
-            await DisplayAlert("Subscription", "You have been subscribed successfully!", "OK");
-        }
-        else
-        {
-            // Email is invalid
-            await DisplayAlert("Error", "Please enter a valid email address.", "OK");
-        }
-    }
 }
 
 public class SettingsViewModel : INotifyPropertyChanged

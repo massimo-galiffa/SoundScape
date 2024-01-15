@@ -1,98 +1,54 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="SoundScape.View.SettingsPage"
-             Title="Settings">
+             x:Class="SoundScape.View.SettingsPage">
     <ScrollView>
         <VerticalStackLayout Spacing="15" Padding="10">
-
+            <Label Text="Settings" FontSize="30" FontFamily="SourceCodeProBold" TextColor="white" HorizontalOptions="Start" VerticalOptions="Center" />
+            <Frame CornerRadius="40" HeightRequest="120" WidthRequest="400" HorizontalOptions="Start" BackgroundColor="DimGray">
+                <HorizontalStackLayout Spacing="0" Padding="-15,0,0,0">
+                    <Frame WidthRequest="100" 
+           HeightRequest="100" 
+           CornerRadius="50" 
+           HorizontalOptions="Center" 
+           VerticalOptions="Center" 
+           Padding="0" 
+           IsClippedToBounds="true" 
+           BackgroundColor="Turquoise"
+           BorderColor="Transparent">
+                        <Image Source="drinkcat.png" />
+                    </Frame>
+                    <Frame VerticalOptions="Center" HorizontalOptions="End" Background="Transparent" BorderColor="Transparent"  >
+                        <Image Source="uploadwhite.png"  />
+                    </Frame>
+                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                        <Label Text="Upload New Proile Picture" FontSize="12" FontFamily="OpenSansSemibold" TextColor="white" HorizontalOptions="End" VerticalOptions="Center" ></Label>
+                     </Frame>
+                </HorizontalStackLayout>
+            </Frame>
+            
             <!-- Sound Quality Settings -->
-            <Label Text="Sound Quality" FontSize="18" />
+            <Label Text="Sound Quality" FontSize="18" FontFamily="SourceCodeProBold"/>
             <HorizontalStackLayout Spacing="10">
-                <RadioButton Content="Low" GroupName="SoundQuality" />
-                <RadioButton Content="Medium" GroupName="SoundQuality" />
-                <RadioButton Content="High" GroupName="SoundQuality" />
+                <RadioButton Content="Low" GroupName="SoundQuality" FontFamily="OpenSansRegular" />
+                <RadioButton Content="Medium" GroupName="SoundQuality" FontFamily="OpenSansRegular"/>
+                <RadioButton Content="High" GroupName="SoundQuality" FontFamily="OpenSansRegular"/>
             </HorizontalStackLayout>
 
             <!-- Shuffle Songs Setting -->
-            <Label Text="Shuffle Songs" FontSize="18" />
+            <Label Text="Shuffle Songs" FontSize="18" FontFamily="SourceCodeProBold"/>
             <Switch IsToggled="{Binding ShuffleSongs}" />
 
             <!-- Song Transition Setting -->
-            <Label Text="Song Transition Seconds" FontSize="18" />
+            <Label Text="Song Transition Seconds" FontSize="18" FontFamily="SourceCodeProBold"/>
             <Slider Value="{Binding TransitionLevel}" Maximum="1" Minimum="0" />
 
             <!-- Favorite Genre Setting -->
-            <Label Text="Favorite Genre" FontSize="18" />
+            <Label Text="Favorite Genre" FontSize="18" FontFamily="SourceCodeProBold"/>
             <Picker Title="Select a genre" SelectedIndex="{Binding FavoriteGenreIndex}" ItemsSource="{Binding Genres}" />
 
             <!-- Birthday Setting -->
-            <Label Text="Birthday" FontSize="18" />
+            <Label Text="Birthday" FontSize="18" FontFamily="SourceCodeProBold"/>
             <DatePicker Date="{Binding Birthday}" />
-
-            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
-                <StackLayout Padding="20" Spacing="10">
-
-                    <!-- Header Frame with Grid inside -->
-                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-
-                            <StackLayout Orientation="Vertical" Grid.Column="0">
-                                <Label Text="SoundScape" FontSize="Large" TextColor="White"/>
-                                <Label Text="Your ultimate music destination" FontSize="Small" TextColor="White"/>
-                            </StackLayout>
-
-                            <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="End">
-                                <Label Text="Impressum" FontSize="Medium" TextColor="White" FontAttributes="Bold"/>
-                                <Label Text="located in switzerland" FontSize="Caption" TextColor="White"/>
-                                <Label Text="SoundScape Inc." FontSize="Caption" />
-                                <Label Text="123 Music Street" FontSize="Caption" />
-                                <Label Text="Melody Town, MT 56789" FontSize="Caption" />
-                                <Label Text="Email: contact@soundscape.com" FontSize="Caption" />
-                                <!--create a hyperlink to my website that leads to the website-->
-                                <Label 
-                                Text="click here"
-                                VerticalOptions="Center" 
-                                HorizontalOptions="Center" >
-
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Command="{Binding TapCommand}"
-                                 CommandParameter="https://learn.microsoft.com/dotnet/maui/" />
-                                    </Label.GestureRecognizers>
-                                    </Label>
-
-
-
-
-                            </StackLayout>
-                        </Grid>
-                    </Frame>
-                    <!-- Navigation Frame with Image -->
-                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
-                        <StackLayout Orientation="Horizontal" Spacing="2">
-                            <Image Source="soundscapelogo.png" HeightRequest="250" WidthRequest="250"/>
-                        </StackLayout>
-                    </Frame>
-                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
-                        <Label Text="SoundScape Version 1.0" FontSize="Medium" TextColor="White" />
-                    </Frame>
-
-                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
-                        <StackLayout Orientation="Vertical" Spacing="2">
-                            <Label Text="Subscribe to our newsletter" FontSize="Medium" TextColor="White" FontAttributes="Bold"/>
-                            <Entry x:Name="emailEntry" Placeholder="Enter your email address" TextColor="#5856d6"/>
-                            <Button Text="Subscribe" Clicked="Button_Clicked_Subscribed" BackgroundColor="#5856d6" TextColor="White" CornerRadius="10"/>
-                        </StackLayout>
-                    </Frame>
-
-                </StackLayout>
-            </Frame>
-
-
-
 
         </VerticalStackLayout>
     </ScrollView>

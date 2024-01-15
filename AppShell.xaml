@@ -4,8 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:view="clr-namespace:SoundScape.View"
     Shell.FlyoutBehavior="Locked"
-    FlyoutBackground="#280B34"
-    Title="SoundScape">
+    FlyoutBackground="#2a1154"
+    Title="SoundScape" FlyoutWidth="200">
 
    <Shell.FlyoutHeaderTemplate>
     <DataTemplate>
@@ -26,21 +26,21 @@
     </DataTemplate>
 </Shell.FlyoutHeaderTemplate>
 
-    <FlyoutItem  Title="Library" Icon="library.png">
+    <FlyoutItem  Title="Library" Icon="librarywhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:LibraryPage}" />
     </FlyoutItem>
-    <FlyoutItem  Title="Home" Icon="home.png">
+    <FlyoutItem  Title="Home" Icon="homewhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:HomePage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Search" Icon="search.png">
+    <FlyoutItem Title="Search" Icon="searchwhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:SearchPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Settings" Icon="settings.png">
+    <FlyoutItem Title="Settings" Icon="settingswhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:SettingsPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="FAQ" Icon="faq.png">
+    <FlyoutItem Title="FAQ" Icon="faqwhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:FaqPage}" />
     </FlyoutItem>
 </Shell>

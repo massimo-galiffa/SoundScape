@@ -4,23 +4,23 @@
              x:Class="SoundScape.View.FaqPage">
     <ScrollView Margin="10">
         <StackLayout Spacing="10">
-            <Label Text="Frequently Asked Questions" FontSize="Header" HorizontalOptions="Center"/>
-            <Label Text="Tap on a question to see the answer" FontSize="Small" TextColor="Purple" HorizontalOptions="Center"/>
+            <Label Text="Frequently Asked Questions" FontSize="Header" HorizontalOptions="Center" FontFamily="SourceCodeProMedium"/>
+            <Label Text="Tap on a question to see the answer" FontSize="Small" TextColor="white" HorizontalOptions="Center" FontFamily="OpenSansRegular"/>
 
             <!-- FAQ Item 1 -->
             <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
                 <StackLayout Padding="20">
                     <Label Text="What is SoundScape?" 
-                       FontSize="Medium" 
-                       FontAttributes="Bold" 
+                       FontSize="Medium"  
+                       FontAttributes="Bold"
                        VerticalOptions="Center" 
-                       HorizontalOptions="FillAndExpand">
+                       HorizontalOptions="FillAndExpand" FontFamily="OpenSansBold">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label Text="SoundScape is a mobile application that allows users to create and share Playlists"
-                       IsVisible="False" />
+                       IsVisible="False" FontFamily="SourceCodeProMedium"/>
                 </StackLayout>
             </Frame>
 
@@ -31,13 +31,14 @@
                         FontSize="Medium" 
                        FontAttributes="Bold" 
                        VerticalOptions="Center" 
-                       HorizontalOptions="FillAndExpand">
+                       HorizontalOptions="FillAndExpand"
+                           FontFamily="OpenSansBold">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label Text="SoundScape offers both free and premium subscription options. The free version includes basic streaming functionality with ads, while the premium subscription offers an ad-free experience with additional features like offline listening and higher quality audio."
-                       IsVisible="False" />
+                       IsVisible="False"  FontFamily="SourceCodeProMedium"/>
                 </StackLayout>
             </Frame>
 
@@ -48,13 +49,14 @@
                         FontSize="Medium" 
                        FontAttributes="Bold" 
                        VerticalOptions="Center" 
-                       HorizontalOptions="FillAndExpand">
+                       HorizontalOptions="FillAndExpand"
+                           FontFamily="OpenSansBold">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label Text="You can search for specific artists, albums, or songs using the search bar. "
-                       IsVisible="False" />
+                       IsVisible="False"  FontFamily="SourceCodeProMedium"/>
                 </StackLayout>
             </Frame>
             <!-- FAQ Item 4 -->
@@ -64,13 +66,14 @@
             FontSize="Medium" 
            FontAttributes="Bold" 
            VerticalOptions="Center" 
-           HorizontalOptions="FillAndExpand">
+           HorizontalOptions="FillAndExpand"
+                           FontFamily="OpenSansBold">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label Text="If you experience any issues, please contact our support team"
-           IsVisible="False" />
+           IsVisible="False"  FontFamily="SourceCodeProMedium"/>
                 </StackLayout>
             </Frame>
             <!-- FAQ Item 5 -->
@@ -80,16 +83,71 @@
             FontSize="Medium" 
            FontAttributes="Bold" 
            VerticalOptions="Center" 
-           HorizontalOptions="FillAndExpand">
+           HorizontalOptions="FillAndExpand"
+                           FontFamily="OpenSansBold">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Tapped="OnQuestionTapped" NumberOfTapsRequired="1" />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label Text="For free users, there is a limit on the number of skips per hour. However, premium subscribers enjoy unlimited skips."
-           IsVisible="False" />
+           IsVisible="False"  FontFamily="SourceCodeProMedium"/>
                 </StackLayout>
             </Frame>
+
+
+            
+                <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+            <StackLayout Padding="20" Spacing="10">
+
+                <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Orientation="Vertical" Grid.Column="0">
+                            <Label Text="SoundScape" FontSize="Large" TextColor="White" FontFamily="SourceCodeProMedium"/>
+                            <Label Text="Your ultimate music destination" FontSize="Small" TextColor="White" FontFamily="SourceCodeProBold"/>
+                        </StackLayout>
+                        <!-- Impressum -->
+                        <StackLayout Orientation="Vertical" Grid.Column="1" HorizontalOptions="End">
+                            <Label Text="Impressum" FontSize="Medium" TextColor="White" FontFamily="SourceCodeProBold"/>
+                            <Label Text="located in switzerland" FontSize="Caption" TextColor="White"/>
+                            <Label Text="SoundScape Inc." FontSize="Caption" />
+                            <Label Text="123 Music Street" FontSize="Caption" />
+                            <Label Text="Melody Town, MT 56789" FontSize="Caption" />
+                            <Label Text="Email: contact@soundscape.com" FontSize="Caption" />
+                            <!--create a hyperlink to my website that leads to the website-->
+
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                    <StackLayout Orientation="Horizontal" Spacing="2">
+                        <Image Source="soundscapelogo.png" HeightRequest="250" WidthRequest="250"/>
+                    </StackLayout>
+                </Frame>
+                <!-- Version -->
+                <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                    <Label Text="SoundScape Version 1.0" FontSize="Medium" TextColor="White" FontFamily="SourceCodeProBold" />
+                </Frame>
+                <!-- validation Subscribed -->
+                <Frame BackgroundColor="Transparent" BorderColor="Transparent">
+                    <StackLayout Orientation="Vertical" Spacing="2">
+                        <Label Text="Subscribe to our newsletter" FontSize="Medium" TextColor="White" FontFamily="OpenSansBold"/>
+                        <Entry x:Name="emailEntry" Placeholder="Enter your email address" TextColor="#5856d6"/>
+                        <Button Text="Subscribe" FontFamily="SourceCodeProBold" Clicked="Button_Clicked_Subscribed" BackgroundColor="#5856d6" TextColor="White" CornerRadius="10"/>
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+        </Frame>
+
+
+
+
+    
         </StackLayout>
     </ScrollView>
-
 </ContentPage>

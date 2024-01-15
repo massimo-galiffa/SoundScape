@@ -7,44 +7,51 @@
 
             <Label Text="Recently Listened Playlists" FontSize="24" />
 
-            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="Auto" HorizontalOptions="CenterAndExpand">
-                <!-- Playlist Frame 1 -->
-                <Frame BackgroundColor="Yellow" Grid.Column="0" CornerRadius="10" Padding="0" Margin="5" HeightRequest="160" WidthRequest="150">
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*" WidthRequest="1200" ColumnSpacing="10">
+
+                <Frame BackgroundColor="Transparent" CornerRadius="20" BorderColor="Transparent" Grid.Column="0" Grid.Row="0" HeightRequest="165" WidthRequest="270" Padding="0">
                     <Grid>
-                        <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
-                            <Image Source="morningjpg.jpg" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
-                        </Frame>
-                        <Label Text="Morning Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
+                        <Image Source="morningjpg.jpg" Aspect="AspectFill" Opacity="0.5"/>
+                        <StackLayout Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+
+                            <Label FontFamily="OpenSansSemibold" Text="Morning Playlist" FontSize="20" TextColor="white" />
+                        </StackLayout>
                     </Grid>
                 </Frame>
-                <!-- Playlist Frame 1 -->
-                <Frame BackgroundColor="Yellow" Grid.Column="1" CornerRadius="10" Padding="0" Margin="5" HeightRequest="160" WidthRequest="150">
+
+                <Frame BackgroundColor="Transparent" CornerRadius="20" BorderColor="Transparent" Grid.Column="1" Grid.Row="0" HeightRequest="165" WidthRequest="270" Padding="0">
                     <Grid>
-                        <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
-                        <Image Source="crowd.jpg" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
-                        </Frame>
-                        <Label Text="Rap Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
+                        <Image Source="crowd.jpg" Aspect="AspectFill" Opacity="0.5"/>
+                        <!-- Set Aspect to AspectFill -->
+                        <StackLayout Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+
+                            <Label FontFamily="OpenSansSemibold" Text="Rap" FontSize="20" TextColor="white" />
+                        </StackLayout>
                     </Grid>
                 </Frame>
-                <!-- Playlist Frame 1 -->
-                <Frame BackgroundColor="Yellow" Grid.Column="2" CornerRadius="10" Padding="0" Margin="5" HeightRequest="160" WidthRequest="150">
+
+                <Frame BackgroundColor="Transparent" CornerRadius="20" BorderColor="Transparent" Grid.Column="2" Grid.Row="0" HeightRequest="165" WidthRequest="270" Padding="0">
                     <Grid>
-                        <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
-                        <Image Source="yeat.png" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
-                        </Frame>
-                        <Label Text="Yeat Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
+                        <Image Source="yeat.png" Aspect="AspectFill" Opacity="0.5"/>
+                        <!-- Set Aspect to AspectFill -->
+                        <StackLayout Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+
+                            <Label FontFamily="OpenSansSemibold" Text="Yeat Songs" FontSize="20" TextColor="white" />
+                        </StackLayout>
                     </Grid>
                 </Frame>
-                <!-- Playlist Frame 1 -->
-                <Frame BackgroundColor="Yellow" Grid.Column="3" CornerRadius="10" Padding="0" Margin="5" HeightRequest="160" WidthRequest="150">
+
+                <Frame BackgroundColor="Transparent" CornerRadius="20" BorderColor="Transparent" Grid.Column="3" Grid.Row="0" HeightRequest="165" WidthRequest="270" Padding="0">
                     <Grid>
-                        <Frame BackgroundColor="Gray" Grid.Column="0" CornerRadius="10" Padding="0" Margin="-30">
-                            <Image Source="study.jpg" Aspect="AspectFill" HorizontalOptions="Center" VerticalOptions="Start"  HeightRequest="160" WidthRequest="150" />
-                        </Frame>
-                        <Label Text="Study Playlist" VerticalOptions="End" HorizontalOptions="Center" TextColor="white" FontSize="16" BackgroundColor="#00000099" Padding="5"/>
-                        
+                        <Image Source="study.jpg" Aspect="AspectFill" Opacity="0.5"/>
+                        <!-- Set Aspect to AspectFill -->
+                        <StackLayout Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center">
+
+                            <Label FontFamily="OpenSansSemibold" Text="Study Playlist" FontSize="20" TextColor="white" />
+                        </StackLayout>
                     </Grid>
                 </Frame>
+
             </Grid>
 
 
