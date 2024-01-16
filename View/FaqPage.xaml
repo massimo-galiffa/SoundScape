@@ -136,8 +136,8 @@
                 <Frame BackgroundColor="Transparent" BorderColor="Transparent">
                     <StackLayout Orientation="Vertical" Spacing="2">
                         <Label Text="Subscribe to our newsletter" FontSize="Medium" TextColor="White" FontFamily="OpenSansBold"/>
-                        <Entry x:Name="emailEntry" Placeholder="Enter your email address" TextColor="#5856d6"/>
-                        <Button Text="Subscribe" FontFamily="SourceCodeProBold" Clicked="Button_Clicked_Subscribed" BackgroundColor="#5856d6" TextColor="White" CornerRadius="10"/>
+                            <Entry x:Name="emailEntry" Placeholder="Enter your email address" />
+                            <Button Text="Subscribe" FontFamily="SourceCodeProBold" Clicked="Button_Clicked_Subscribed" BackgroundColor="#2a1154" TextColor="White" CornerRadius="10"/>
                     </StackLayout>
                 </Frame>
 
