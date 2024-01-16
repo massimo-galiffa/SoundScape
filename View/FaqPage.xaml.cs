@@ -1,11 +1,19 @@
+using System.Collections.ObjectModel;
+
 namespace SoundScape.View;
 
 public partial class FaqPage : ContentPage
 {
-	public FaqPage()
+
+    public FaqPage()
 	{
 		InitializeComponent();
-	}
+
+
+        BindingContext = this;
+    }
+
+
     private void OnQuestionTapped(object sender, EventArgs e)
     {
         if (sender is Label questionLabel && questionLabel.Parent is StackLayout stackLayout)

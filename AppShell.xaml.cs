@@ -8,9 +8,8 @@ namespace SoundScape
         public AppShell()
         {
             InitializeComponent();
-
-
+           
         }
-        
+       
     }
 }

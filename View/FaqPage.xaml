@@ -94,9 +94,7 @@
                 </StackLayout>
             </Frame>
 
-
-            
-                <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
             <StackLayout Padding="20" Spacing="10">
 
                 <Frame BackgroundColor="Transparent" BorderColor="Transparent">

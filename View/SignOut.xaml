@@ -13,7 +13,6 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <!-- Frame in the first column -->
         <Frame Grid.Column="0" BackgroundColor="#2a1154">
             <Grid>
                 <Grid.RowDefinitions>
@@ -46,8 +45,7 @@
                        Margin="0,-130,0,0"/>
             </Grid>
         </Frame>
-
-        <!-- Frame in the second column -->
+        
         <Frame Grid.Column="1" BackgroundColor="Black">
             <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
                 <Image Source="soundscape_logo.png"

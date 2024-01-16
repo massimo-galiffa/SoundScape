@@ -3,17 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SoundScape.View.SearchPage">
     <StackLayout>
-
-        <!-- Search Bar -->
-        <SearchBar
-               Placeholder="Search" 
-               Text="{Binding SearchText}" 
-               SearchCommand="{Binding PerformSearchCommand}" />
-
-        <!-- Clear Button -->
+        
+            <SearchBar Background="Transparent"
+               Margin="50,25,50,4"    
+               Placeholder="Search"
+               TextColor="White"
+               Text="{Binding SearchText}"
+               SearchCommand="{Binding PerformSearchCommand}"
+               MaximumWidthRequest="800"
+               CancelButtonColor="White"
+               VerticalOptions="Center"
+               BackgroundColor="Transparent" />
+        
         <Button Text="Clear" 
+                BackgroundColor="White"
+                CornerRadius="17"
             HorizontalOptions="End" 
-            Margin="0,10,10,0" 
+            Margin="0,15,10,0" 
             Command="{Binding ClearSearchCommand}" />
         <Label Text="Recent Searches" Padding="20" FontFamily="OpenSansSemibold" FontSize="Medium"></Label>
         <Label Text="" FontSize="16" Margin="10,0,0,0">
@@ -27,7 +33,6 @@
             </Label.Triggers>
         </Label>
 
-        <!-- ListView to display RecentSearches -->
         <ListView ItemsSource="{Binding RecentSearches}" Margin="10,0,10,0">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -35,6 +40,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
         <Label Text="Based on what you like" Padding="20" FontSize="Medium" FontFamily="OpenSansSemibold"></Label>
         <VerticalStackLayout>
             <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,auto" WidthRequest="1240" HeightRequest="450" ColumnSpacing="0">
@@ -42,7 +48,6 @@
                 <Frame BackgroundColor="#091018" BorderColor="Transparent" Grid.Column="0" Grid.Row="0" HeightRequest="180" WidthRequest="290" Padding="0" CornerRadius="40">
                     <Grid>
                         <Image Source="mountans.jpg" Aspect="AspectFill" />
-                        <!-- Set Aspect to AspectFill -->
                         <BoxView Color="#1C1C1E" IsVisible="True" Opacity="0.5"/>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label FontFamily="SourceCodeProBold" Text="Indie Mix" FontSize="20" TextColor="White" />
@@ -53,7 +58,6 @@
                 <Frame BackgroundColor="#091018" BorderColor="Transparent" Grid.Column="1" Grid.Row="0" HeightRequest="180" WidthRequest="290" Padding="0" CornerRadius="40">
                     <Grid>
                         <Image Source="housemix.jpg" Aspect="AspectFill"/>
-                        <!-- Set Aspect to AspectFill -->
                         <BoxView Color="#1C1C1E" IsVisible="True" Opacity="0.5"/>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label FontFamily="SourceCodeProBold" Text="House Mix" FontSize="20" TextColor="White" />
@@ -64,7 +68,6 @@
                 <Frame BackgroundColor="#091018" BorderColor="Transparent" Grid.Column="2" Grid.Row="0" HeightRequest="180" WidthRequest="290" Padding="0" CornerRadius="40">
                     <Grid>
                         <Image Source="popmusic.jpg" Aspect="AspectFill"/>
-                        <!-- Set Aspect to AspectFill -->
                         <BoxView Color="#1C1C1E" IsVisible="True" Opacity="0.5"/>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label FontFamily="SourceCodeProBold" Text="Pop Mix" FontSize="20" TextColor="White" />
@@ -75,7 +78,6 @@
                 <Frame BackgroundColor="#091018" BorderColor="Transparent" Grid.Column="3" Grid.Row="0" HeightRequest="180" WidthRequest="290" Padding="0" CornerRadius="40">
                     <Grid>
                         <Image Source="rockmix.jpg" Aspect="AspectFill"/>
-                        <!-- Set Aspect to AspectFill -->
                         <BoxView Color="#1C1C1E" IsVisible="True" Opacity="0.5"/>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label FontFamily="SourceCodeProBold" Text="Rock Mix" FontSize="20" TextColor="White" />
@@ -86,7 +88,6 @@
                 <Frame BackgroundColor="#091018" BorderColor="Transparent" Grid.Column="0" Grid.Row="1" HeightRequest="180" WidthRequest="290" Padding="0" Margin="0,0,0,32" CornerRadius="40">
                     <Grid>
                         <Image Source="chillmix.jpg" Aspect="AspectFill"/>
-                        <!-- Set Aspect to AspectFill -->
                         <BoxView Color="#1C1C1E" IsVisible="True" Opacity="0.5"/>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label FontFamily="SourceCodeProBold" Text="Chill Mix" FontSize="20" TextColor="White" />
@@ -97,7 +98,6 @@
                 <Frame BackgroundColor="#091018" BorderColor="Transparent" Grid.Column="1" Grid.Row="1" HeightRequest="180" WidthRequest="290" Padding="0" Margin="0,0,0,32" CornerRadius="40">
                     <Grid>
                         <Image Source="classicalmix.jpg" Aspect="AspectFill"/>
-                        <!-- Set Aspect to AspectFill -->
                         <BoxView Color="#1C1C1E" IsVisible="True" Opacity="0.5"/>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label FontFamily="SourceCodeProBold" Text="Classical Mix" FontSize="20" TextColor="White" />
@@ -108,7 +108,6 @@
                 <Frame BackgroundColor="#091018" BorderColor="Transparent" Grid.Column="2" Grid.Row="1" HeightRequest="180" WidthRequest="290" Padding="0" Margin="0,0,0,32" CornerRadius="40">
                     <Grid>
                         <Image Source="trapmix.jpg" Aspect="AspectFill"/>
-                        <!-- Set Aspect to AspectFill -->
                         <BoxView Color="#1C1C1E" IsVisible="True" Opacity="0.5"/>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label FontFamily="SourceCodeProBold" Text="Trap Mix" FontSize="20" TextColor="White" />
@@ -119,7 +118,6 @@
                 <Frame BackgroundColor="#091018" BorderColor="Transparent" Grid.Column="3" Grid.Row="1" HeightRequest="180" WidthRequest="290" Padding="0" Margin="0,0,0,32" CornerRadius="40">
                     <Grid>
                         <Image Source="vacationmix.jpg" Aspect="AspectFill"/>
-                        <!-- Set Aspect to AspectFill -->
                         <BoxView Color="#1C1C1E" IsVisible="True" Opacity="0.5"/>
                         <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                             <Label FontFamily="SourceCodeProBold" Text="Vacation Mix" FontSize="20" TextColor="White" />

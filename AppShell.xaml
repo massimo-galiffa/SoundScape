@@ -5,7 +5,7 @@
     xmlns:view="clr-namespace:SoundScape.View"
     Shell.FlyoutBehavior="Locked"
     FlyoutBackground="#2a1154"
-    Title="SoundScape" FlyoutWidth="200">
+    Title="SoundScape" FlyoutWidth="200" >
 
    <Shell.FlyoutHeaderTemplate>
     <DataTemplate>
@@ -32,7 +32,6 @@
     <FlyoutItem Route="HomePage" Title="Home" Icon="homewhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:HomePage}" />
     </FlyoutItem>
-
     <FlyoutItem Title="Search" Icon="searchwhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:SearchPage}" />
     </FlyoutItem>
@@ -43,7 +42,7 @@
     <FlyoutItem Title="FAQ" Icon="faqwhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:FaqPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Logout" Icon="settingswhite.png">
+    <FlyoutItem Title="Logout" Icon="logoutwhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:SignOut}" />
     </FlyoutItem>
 </Shell>
