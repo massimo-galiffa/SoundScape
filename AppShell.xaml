@@ -29,7 +29,7 @@
     <FlyoutItem  Title="Library" Icon="librarywhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:LibraryPage}" />
     </FlyoutItem>
-    <FlyoutItem  Title="Home" Icon="homewhite.png">
+    <FlyoutItem Route="HomePage" Title="Home" Icon="homewhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:HomePage}" />
     </FlyoutItem>
 
@@ -42,5 +42,8 @@
     </FlyoutItem>
     <FlyoutItem Title="FAQ" Icon="faqwhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:FaqPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Logout" Icon="settingswhite.png">
+        <ShellContent ContentTemplate="{DataTemplate view:SignOut}" />
     </FlyoutItem>
 </Shell>
