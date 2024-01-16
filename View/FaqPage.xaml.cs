@@ -13,8 +13,19 @@ public partial class FaqPage : ContentPage
         BindingContext = this;
     }
 
+    private void OnLinkClicked(object sender, EventArgs e)
+    {
+        // Replace "YOUR_YOUTUBE_VIDEO_ID" with the actual ID of your YouTube video
+        string videoId = "YOUR_YOUTUBE_VIDEO_ID";
 
-    private void OnQuestionTapped(object sender, EventArgs e)
+        // Construct the YouTube video URL
+        string youtubeUrl = $"https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+        // Launch the URL using Launcher
+        Launcher.OpenAsync(new Uri(youtubeUrl));
+    }
+
+private void OnQuestionTapped(object sender, EventArgs e)
     {
         if (sender is Label questionLabel && questionLabel.Parent is StackLayout stackLayout)
         {

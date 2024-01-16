@@ -8,7 +8,7 @@
             <Label Text="Tap on a question to see the answer" FontSize="Small" TextColor="white" HorizontalOptions="Center" FontFamily="OpenSansRegular"/>
 
             <!-- FAQ Item 1 -->
-            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#2a1154" HasShadow="True">
                 <StackLayout Padding="20">
                     <Label Text="What is SoundScape?" 
                        FontSize="Medium"  
@@ -25,7 +25,7 @@
             </Frame>
 
             <!-- FAQ Item 2 -->
-            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#2a1154" HasShadow="True">
                 <StackLayout Padding="20">
                     <Label Text="Is SoundScape free to use?" 
                         FontSize="Medium" 
@@ -43,7 +43,7 @@
             </Frame>
 
             <!-- FAQ Item 3 -->
-            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#2a1154" HasShadow="True">
                 <StackLayout Padding="20">
                     <Label Text="How can I find my favorite music on SoundScape?" 
                         FontSize="Medium" 
@@ -60,7 +60,7 @@
                 </StackLayout>
             </Frame>
             <!-- FAQ Item 4 -->
-            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#2a1154" HasShadow="True">
                 <StackLayout Padding="20">
                     <Label Text="What should I do if I encounter a problem or bug?" 
             FontSize="Medium" 
@@ -77,7 +77,7 @@
                 </StackLayout>
             </Frame>
             <!-- FAQ Item 5 -->
-            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#2a1154" HasShadow="True">
                 <StackLayout Padding="20">
                     <Label Text="Is there a limit to how many songs I can skip?" 
             FontSize="Medium" 
@@ -94,7 +94,7 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Padding="10" CornerRadius="10" BackgroundColor="Turquoise" HasShadow="True">
+            <Frame Padding="10" CornerRadius="10" BackgroundColor="#2a1154" HasShadow="True">
             <StackLayout Padding="20" Spacing="10">
 
                 <Frame BackgroundColor="Transparent" BorderColor="Transparent">
@@ -115,10 +115,16 @@
                             <Label Text="SoundScape Inc." FontSize="Caption" />
                             <Label Text="123 Music Street" FontSize="Caption" />
                             <Label Text="Melody Town, MT 56789" FontSize="Caption" />
-                            <Label Text="Email: contact@soundscape.com" FontSize="Caption" />
-                            <!--create a hyperlink to my website that leads to the website-->
-
-                        </StackLayout>
+                                <Label Text="Email: contact@soundscape.com" FontSize="Caption" />
+                            <!-- Link -->
+                                <StackLayout>
+                                    <Label Text="Click to visit our Website!" TextColor="Red" >
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnLinkClicked" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
                     </Grid>
                 </Frame>
                 <Frame BackgroundColor="Transparent" BorderColor="Transparent">
@@ -134,8 +140,8 @@
                 <Frame BackgroundColor="Transparent" BorderColor="Transparent">
                     <StackLayout Orientation="Vertical" Spacing="2">
                         <Label Text="Subscribe to our newsletter" FontSize="Medium" TextColor="White" FontFamily="OpenSansBold"/>
-                            <Entry x:Name="emailEntry" Placeholder="Enter your email address" />
-                            <Button Text="Subscribe" FontFamily="SourceCodeProBold" Clicked="Button_Clicked_Subscribed" BackgroundColor="#2a1154" TextColor="White" CornerRadius="10"/>
+                            <Entry x:Name="emailEntry" Placeholder="Enter your email address" Margin="1,10,1,10" />
+                            <Button Text="Subscribe" FontFamily="SourceCodeProBold" Clicked="Button_Clicked_Subscribed" BackgroundColor="#292928" TextColor="White" CornerRadius="10"/>
                     </StackLayout>
                 </Frame>
 
