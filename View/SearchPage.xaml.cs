@@ -25,10 +25,11 @@ public class SearchViewModel : INotifyPropertyChanged
         get => _searchText;
         set
         {
-            _searchText = value;
-            OnPropertyChanged();
-            // Optionally trigger search when text changes
-            PerformSearch();
+            if (_searchText != value)
+            {
+                _searchText = value;
+                OnPropertyChanged();
+            }
         }
     }
 
