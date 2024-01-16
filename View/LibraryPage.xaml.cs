@@ -2,8 +2,17 @@ namespace SoundScape.View;
 
 public partial class LibraryPage : ContentPage
 {
-	public LibraryPage()
+    private PlaylistManager _playlistManager;
+    public LibraryPage()
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();
+        _playlistManager = new PlaylistManager();
+        this.BindingContext = _playlistManager;
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+       
+    }
+
 }

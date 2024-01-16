@@ -55,12 +55,6 @@
                HeightRequest="75"
                HorizontalOptions="Center" />
 
-                <Label x:Name="ErrorMessageLabel"
-                Text="Invalid email or empty password"
-                TextColor="Red"
-                IsVisible="False"
-                HorizontalOptions="Center" />
-
                 <Entry x:Name="EmailEntry"
                Placeholder="Email"
                Keyboard="Email"
@@ -70,6 +64,12 @@
                Placeholder="Password"
                IsPassword="True"
                TextChanged="OnEntryTextChanged" />
+
+                <Label x:Name="ErrorMessageLabel"
+                Text="Invalid email or empty password"
+                TextColor="Red"
+                IsVisible="False"
+                HorizontalOptions="Center" />
 
                 <Button x:Name="LoginButton"
                 BackgroundColor="LightBlue"
