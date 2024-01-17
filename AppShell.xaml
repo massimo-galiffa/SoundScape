@@ -26,6 +26,9 @@
     </DataTemplate>
 </Shell.FlyoutHeaderTemplate>
 
+    <FlyoutItem IsVisible="True" FlyoutItemIsVisible="False">
+        <ShellContent ContentTemplate="{DataTemplate view:SignOut}" />
+    </FlyoutItem>
     <FlyoutItem  Title="Library" Icon="librarywhite.png">
         <ShellContent ContentTemplate="{DataTemplate view:LibraryPage}" />
     </FlyoutItem>
