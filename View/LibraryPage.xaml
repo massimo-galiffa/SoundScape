@@ -4,24 +4,23 @@
              x:Class="SoundScape.View.LibraryPage">
 
     <ScrollView>
-        <VerticalStackLayout Padding="16" Spacing="10">
+        <VerticalStackLayout Padding="20" Spacing="15">
 
-            <Label Text="Recently Listened Playlists" FontFamily="SourceCodeProBold" FontSize="Medium"/>
+            <Label Text="Your Playlists" FontFamily="SourceCodeProBold" FontSize="Medium"/>
 
-            <CollectionView x:Name="playlistsCollectionView" ItemsSource="{Binding Playlists}" 
-             WidthRequest="1200">
+            <CollectionView x:Name="playlistsCollectionView" ItemsSource="{Binding Playlists}">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical" Span="4"/>
+                    <GridItemsLayout Orientation="Vertical" Span="4" HorizontalItemSpacing="5"/>
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Frame BackgroundColor="Transparent" CornerRadius="20" BorderColor="Transparent" 
-                HeightRequest="165" WidthRequest="270" Padding="0">
+                        HeightRequest="165" Padding="0">
                             <Grid>
                                 <Image Source="{Binding Image}" Aspect="AspectFill" Opacity="0.5"/>
                                 <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
                                     <Label FontFamily="OpenSansSemibold" Text="{Binding Name}" 
-                            FontSize="20" TextColor="white" />
+                                    FontSize="20" TextColor="white" />
                                 </StackLayout>
                             </Grid>
                         </Frame>

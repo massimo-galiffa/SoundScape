@@ -9,12 +9,10 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
 
+        <!-- Linker Frame mit Logo und Text -->
         <Frame Grid.Column="0" BackgroundColor="#2a1154">
-            <Grid>
+            <Grid Padding="20">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
@@ -25,7 +23,7 @@
                        Grid.Row="0"
                        HorizontalOptions="Center" 
                        VerticalOptions="CenterAndExpand" 
-                       Scale="0.5"/>
+                       Aspect="AspectFit"/>
 
                 <Label Text="SoundScape" 
                        Grid.Row="1"
@@ -33,8 +31,7 @@
                        HorizontalTextAlignment="Center" 
                        FontSize="Large" 
                        FontFamily="SourceCodeProBold"
-                       Margin="0,-190,0,0"
-                       />
+                       VerticalOptions="Center"/>
 
                 <Label Text="Your ultimate music destination" 
                        Grid.Row="2"
@@ -42,44 +39,48 @@
                        HorizontalTextAlignment="Center" 
                        FontSize="Small" 
                        FontFamily="OpenSansRegular"
-                       Margin="0,-130,0,0"/>
+                       VerticalOptions="Center"/>
             </Grid>
         </Frame>
-        
+
+        <!-- Rechter Frame mit Eingabefeldern und Buttons -->
         <Frame Grid.Column="1" BackgroundColor="Black">
-            <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
-                <Image Source="soundscape_logo.png"
-               SemanticProperties.Description="SoundScape logo"
-               HeightRequest="75"
-               HorizontalOptions="Center" />
+            <ScrollView>
+                <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Center">
 
-                <Entry x:Name="EmailEntry"
-               Placeholder="Email"
-               Keyboard="Email"
-               TextChanged="OnEntryTextChanged" />
+                    <Image Source="soundscape_logo.png"
+                           SemanticProperties.Description="SoundScape logo"
+                           HeightRequest="75"
+                           HorizontalOptions="Center" />
 
-                <Entry x:Name="PasswordEntry"
-               Placeholder="Password"
-               IsPassword="True"
-               TextChanged="OnEntryTextChanged" />
+                    <Entry x:Name="EmailEntry"
+                           Placeholder="Email"
+                           Keyboard="Email"
+                           TextChanged="OnEntryTextChanged" />
 
-                <Label x:Name="ErrorMessageLabel"
-                Text="Invalid email or empty password"
-                TextColor="Red"
-                IsVisible="False"
-                HorizontalOptions="Center" />
+                    <Entry x:Name="PasswordEntry"
+                           Placeholder="Password"
+                           IsPassword="True"
+                           TextChanged="OnEntryTextChanged" />
 
-                <Button x:Name="LoginButton"
-                BackgroundColor="LightBlue"
-                Text="Log in"
-                TextColor="Black"
-                Clicked="OnGoToHomeClicked"
-                CornerRadius="10"
-                FontSize="16"
-                Padding="15, 10"
-                HorizontalOptions="Fill" />
+                    <Label x:Name="ErrorMessageLabel"
+                           Text="Invalid email or empty password"
+                           TextColor="Red"
+                           IsVisible="False"
+                           HorizontalOptions="Center" />
 
-            </VerticalStackLayout>
+                    <Button x:Name="LoginButton"
+                            BackgroundColor="LightBlue"
+                            Text="Log in"
+                            TextColor="Black"
+                            Clicked="OnGoToHomeClicked"
+                            CornerRadius="10"
+                            FontSize="16"
+                            Padding="15, 10"
+                            HorizontalOptions="Fill" />
+
+                </VerticalStackLayout>
+            </ScrollView>
         </Frame>
     </Grid>
 </ContentPage>

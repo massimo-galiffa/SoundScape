@@ -3,31 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SoundScape.View.HomePage">
     <ScrollView>
-        <VerticalStackLayout Padding="16" Spacing="10">
+        <VerticalStackLayout Padding="20" Spacing="15">
 
             <Label Text="Recently Listened Playlists" FontFamily="SourceCodeProBold" FontSize="Medium"/>
 
-                <CollectionView x:Name="playlistsCollectionView" ItemsSource="{Binding Playlists}" 
-                WidthRequest="1200">
-                    <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical" Span="4"/>
-                    </CollectionView.ItemsLayout>
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Frame BackgroundColor="Transparent" CornerRadius="20" BorderColor="Transparent" 
-                   HeightRequest="165" WidthRequest="270" Padding="0">
-                                <Grid>
-                                    <Image Source="{Binding Image}" Aspect="AspectFill" Opacity="0.5"/>
-                                    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
-                                        <Label FontFamily="OpenSansSemibold" Text="{Binding Name}" 
-                               FontSize="20" TextColor="white" />
-                                    </StackLayout>
-                                </Grid>
-                            </Frame>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-
+            <CollectionView x:Name="playlistsCollectionView" ItemsSource="{Binding Playlists}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="4" HorizontalItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="Transparent" CornerRadius="20" BorderColor="Transparent" 
+                               HeightRequest="165" Padding="0">
+                            <Grid>
+                                <Image Source="{Binding Image}" Aspect="AspectFill" Opacity="0.5"/>
+                                <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                                    <Label FontFamily="OpenSansSemibold" Text="{Binding Name}" 
+                                           FontSize="20" TextColor="white" />
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
             <VerticalStackLayout>
                 <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,24" />
@@ -58,7 +56,6 @@
                 </CollectionView>
             </VerticalStackLayout>
         </VerticalStackLayout>
-
     </ScrollView>
        
 </ContentPage>

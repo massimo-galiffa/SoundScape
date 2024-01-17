@@ -2,30 +2,31 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SoundScape.View.SettingsPage">
     <ScrollView>
-        <VerticalStackLayout Spacing="15" Padding="10">
+        <VerticalStackLayout Spacing="15" Padding="10" >
+
             <Label Text="Settings" FontSize="30" FontFamily="SourceCodeProBold" TextColor="white" HorizontalOptions="Start" VerticalOptions="Center" />
-            <Frame CornerRadius="40" HeightRequest="120" WidthRequest="400" HorizontalOptions="Start" BackgroundColor="DimGray">
-                <HorizontalStackLayout Spacing="0" Padding="-15,0,0,0">
+
+            <Frame CornerRadius="40" BackgroundColor="DimGray" VerticalOptions="End"  HorizontalOptions="Start">
+                <HorizontalStackLayout Spacing="10" Padding="10" >
                     <Frame WidthRequest="100" 
-           HeightRequest="100" 
-           CornerRadius="50" 
-           HorizontalOptions="Center" 
-           VerticalOptions="Center" 
-           Padding="0" 
-           IsClippedToBounds="true" 
-           BackgroundColor="Turquoise"
-           BorderColor="Transparent">
-                        <Image Source="drinkcat.png" />
+               HeightRequest="100" 
+               CornerRadius="50" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center" 
+               Padding="0" 
+               IsClippedToBounds="true" 
+               BackgroundColor="Turquoise"
+               BorderColor="Transparent"
+               >
+                        <Image Source="drinkcat.png" Aspect="AspectFill" />
                     </Frame>
-                    <Frame VerticalOptions="Center" HorizontalOptions="End" Background="Transparent" BorderColor="Transparent"  >
-                        <Image Source="uploadwhite.png"  />
-                    </Frame>
-                    <Frame BackgroundColor="Transparent" BorderColor="Transparent">
-                        <Label Text="Upload New Proile Picture" FontSize="12" FontFamily="OpenSansSemibold" TextColor="white" HorizontalOptions="End" VerticalOptions="Center" ></Label>
-                     </Frame>
+                    <VerticalStackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Center">
+                        <Image Source="uploadwhite.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Center" />
+                        <Label Padding="15" Text="Upload New Profile Picture" FontSize="12" FontFamily="OpenSansSemibold" TextColor="white" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
                 </HorizontalStackLayout>
             </Frame>
-            
+
             <!-- Sound Quality Settings -->
             <Label Text="Sound Quality" FontSize="18" FontFamily="SourceCodeProBold"/>
             <HorizontalStackLayout Spacing="10">
